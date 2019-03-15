@@ -1,198 +1,60 @@
-/* Landing/Guest Page CSS */
+#index-logo {
+	--opacity: 1;
+	--width: 50%;
+	--offset-top: 0px;
 
-#div-index-top {
-	height: 700px;
+	opacity: var(--opacity);
+	width: var(--width);	
+	transform: translate3d(0, var(--offset-top), 0); 
+
+	height: auto;
+}
+
+#index-heading {
+	--opacity: 1;
+	--offset-top: 0px;
+
+	opacity: var(--opacity);
+	transform: translate3d(0, var(--offset-top), 0);
+	color: var(--color-primary);
+	
+	height: 1000px;
+	text-align: center;
+	
+	transition: opacity 0.2s, transform 0.5s;
+}
+
+.index-button {
+	--opacity: 1;
+
+	opacity: var(--opacity);
+	transition: opacity 0.2s;
+}
+
+.index-button > i {
+	color: var(--color-primary);
+	font-size: 64px;
+	text-decoration: none;
+
+	transition: font-size 0.5s, color 0.5s;
+}
+
+.index-button > i:hover {
+	color: var(--color-dark);
+	font-size: 96px;
+}
+
+#index-section-top {
+	height: 100vh;
+
 	background-image: url(../images/web_home_curve.svg);
+	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: 100%;
+
+	z-index: -1;
 }
 
-#div-index-top-block {
-	display: block;
-	padding-top: 150px;
-	font-size: 18px;
-}
-
-#div-index-top-block h2 {
-	color: #242A30;
-	font-size: 36px;
-	font-weight: bold;
-}
-
-#img-web-home-1 {
-	float: right;
-	margin-top: -150px;
-	margin-right: -150px;
-}
-
-.heading-index-signup-now {
-	margin-top: 24px;
-	font-size: 26px;
-	font-weight: bold;
-}
-
-.signUpButton {
-	margin: 5px;
-	background-color: #4AC074;
-	text-decoration: none;
-	border: none;
-	border-radius: 8px;
-	color: #FFFFFF;
-	font-size: 14px;
-}
-
-.signUpButton:hover{ 
-	cursor: pointer;
-}
-
-.signUpButton:focus{
-	outline: 0;
-}
-
-#div-top-banner {
-  position: relative; 
-	padding: 48px 0px 48px 0px;
-  background-image: linear-gradient(to right, #81E1DD , #4AC074);
-	text-align: center;
-	color: #FFF;
-	z-index: 0;
-	overflow: hidden;
-}
-
-#div-top-banner p{
-	font-size: 18px;
-}
-
-.iconImg {
-	font-size: 48px;
-	padding: 16px;
-}
-
-#signupForFreeButton {
-	display: flex;
-	margin: 0 auto;
-	margin-bottom: 30px;
-	margin-top: 30px;
-}
-
-#div-whatwedo {
-	margin-top: 100px;
-	margin-bottom: 200px;
-}
-
-#div-whatwedo h2 {
-	color: #242A30;
-	font-size: 36px;
-	font-weight: bold;
-}
-
-#div-whatwedo h4, h3 {
-	text-align: center;
-}
-
-.howItWorksDescriptionDiv {
-	width: 100%;
-	height: 500px; 
-	display: flex;
-}
-
-#div-index-bgbox1 {
-	float: right;
-	margin-top: -410px;
-	width:930px;
-	height: 475px;
-  overflow: hidden;
-	background-color: #3B4348;
-}
-
-#div-index-bgbox2 {
-	float: left;
-	margin-top: -410px;
-	width:930px;
-	height: 475px;
-  overflow: hidden;
-	background-color: #E4E8E8;
-}
-
-.descText {
-	padding-left: 50px;
-	padding-right: 100px;
-}
-
-.descText h4{
-	text-align: left !important;
-}
-
-#desc1TextDiv {
-	color: #fff;
-}
-
-#desc2TextDiv {
-	padding-left: 100px;
-	padding-right: 50px;
-}
-
-#desc3TextDiv {
-	height: 275px;
-}
-
-.descImg {
-	height: 341px;
-	width: 513px;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-
-#desc1ImgDiv { 
-	background-image: url(../images/landingPage1of3.jpg);
-}
-
-#desc2ImgDiv { 
-	width: 513px;
-	background-image: url(../images/landingPage2of3.jpg);
-	float: right;
-}
-
-#img-web-home-3 {
-	float:right;
-	margin-top: 50px;
-	margin-right: 0px;
-}
-
-#img-web-home-5 {
-	float:right;
-	margin-top: -200px;
-	margin-right: -170px;
-}
-
-#appLinkDiv {
-    display: flex;
-}
-
-.appLink {
-    margin: 0 auto;
-}
-
-#div-contact {
-  background-image: linear-gradient(to right, #81E1DD , #4AC074);
-	padding-bottom: 50px;
-	text-align: center;
-}
-
-#bottomOfLandingPageCreateAccountButton {
-	margin-top: 20px;
-}
-
-.div-contact-text {
-	color: #fff;
-}
-
-.div-contact-text h3 {
-	padding-top: 50px;
-	font-size: 36px;
-}
-
-.div-contact-text p {
-	font-size: 18px;
-	width: 470px;
+.header-icon {
+	font-size: 100px;
 }

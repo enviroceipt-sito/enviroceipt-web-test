@@ -1,3 +1,11 @@
+/* BASE */
+
+:root {
+  --color-primary: #4AC074;
+  --color-light: #E4E8E8;
+	--color-dark: #2E343A;
+}
+
 html {
 	height: 100%;
 }
@@ -7,42 +15,109 @@ body {
 	min-height:100%; 
 	position:relative; 
 
+	margin: 0;
+
 	background-color: #eee;
-	font-size: 16px;
+	font-size: 20px;
 	font-family: 'Poppins';
 
 	overflow-x: hidden;
 	overflow-y: scroll !important;
 }
 
-#push{
-	height:200px;
+/* LAYOUT */
+
+.section {
+	padding: 5em 0 5em 0;
+	z-index: 100;
 }
 
-.footer {
-	z-index: 2000;
-	position: absolute;	
-  background: #2E343A !important;
-	color: white;
-	bottom: 0;
-	width: 100%;
-	height: 200px; /* Set the fixed height of the footer here */
-	line-height: 24px; /* Vertically center the text there */
-	background-color: #fff;
-} 
-
-.footer-head {
-	font-size: 16px;
+.section-primary {
+	color: var(--color-dark);
+	background-color: var(--color-primary);
 }
 
-.footer-link {
-	font-size: 12px;
+.section-gradient {
+	color: #fff;
+  background-image: linear-gradient(to right, #81E1DD , #4AC074);
 }
 
-.alpha-hover {
-	opacity: 0.6;
+.section-light {
+	color: var(--color-dark);
+	background-color: var(--color-light);
 }
 
-.alpha-hover:hover {
-	opacity: 1;
+.section-dark {
+	color: var(--color-light);
+	background-color: var(--color-dark);
+}
+
+.content {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+/* GRID */
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.grid-col {
+	flex-direction: column;
+}
+
+.center {
+	align-items: center;
+	justify-content: center;
+}
+
+.center > .cell {
+	flex: 0;
+}
+
+.cell {
+	flex: 1;
+}
+
+/* COLORS */
+.color-primary {
+	color: var(--color-primary);
+}
+
+.color-dark {
+	color: var(--color-dark);
+}
+
+.color-light {
+	color: var(--color-light);
+}
+
+/* MISC */
+
+a.disabled {
+	pointer-events: none;
+	cursor: default;
+}
+
+.text-center {
+	text-align: center;
+}
+
+/* ANIMATIONS */
+
+.animated.icon-grow {
+  opacity: 0;
+	transform: translate3d(0px, 50px, 0px);
+	font-size: 50px;
+	line-height: 124px;
+	
+	transition: opacity 0.5s, transform 1s, font-size 0.5s;
+}
+
+.animated.icon-grow.revealed {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+	font-size: 100px;
 }
