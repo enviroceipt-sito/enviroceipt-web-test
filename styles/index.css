@@ -44,6 +44,22 @@
 	font-size: 96px;
 }
 
+.section-button {
+	text-decoration: none;
+}
+
+.section-button > i {
+	opacity: 0.5;
+	font-size: 64px;
+	transition: font-size 0.5s, opacity 0.5s;
+}
+
+.section-button > i:hover {
+	opacity: 1;
+	font-size: 96px;
+}
+
+
 #index-section-top {
 	height: 100vh;
 
@@ -55,6 +71,35 @@
 	z-index: -1;
 }
 
+.index-image {
+	height: 0;
+	visibility:  hidden;
+}
+
+@media screen and (min-width: 800px) {
+	.index-image {
+		margin: 2%;
+		height: 300px;
+		visibility: visible;
+	}
+}
+
 .header-icon {
 	font-size: 100px;
+}
+
+.image-profile {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+
+.profile-card {
+	padding: 5%;
+}
+
+@media screen and (min-width: 800px) {
+	.profile-card {
+		margin: 2% 0;
+	}
 }

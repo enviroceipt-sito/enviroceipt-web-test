@@ -16,7 +16,16 @@ $(window).on('scroll resize', function() {
     var width_offset = (page_offset * page_offset / 50) - page_offset;
 
     $logo.css( "--offset-top", -logo_offset + "px" );
-    $logo.css( "--width", (logo_width - width_offset * 0.06) + "px" );
+
+    if (window.outerWidth > 800) {
+      var new_width = (logo_width - width_offset * 0.06);
+
+      if (new_width < 50) new_width = 50;
+
+      $logo.css( "--width", new_width + "px" );
+    } else {
+      $logo.css( "--width", logo_width + "px" );
+    }
   }
 
   // Show scroll down button if not at top of page:
@@ -65,7 +74,7 @@ $('a[href^="#"]').on('click', function(event) {
       event.preventDefault();
       $('html, body').animate({
           scrollTop: target.offset().top
-      }, 1200);
+      }, 1100);
   }
 
 });

@@ -53,6 +53,7 @@ body {
 }
 
 .content {
+	min-height: 80vh;
 	max-width: 800px;
 	margin: 0 auto;
 }
@@ -61,11 +62,14 @@ body {
 
 .grid {
 	display: flex;
+	flex-direction: column;
 	flex-wrap: wrap;
 }
 
-.grid-col {
-	flex-direction: column;
+@media screen and (min-width: 800px) {
+	.grid-row {
+		flex-direction: row;
+	}
 }
 
 .center {
@@ -78,6 +82,7 @@ body {
 }
 
 .cell {
+	padding: 2%;
 	flex: 1;
 }
 
