@@ -11,12 +11,12 @@ $(window).on('scroll resize', function() {
   var window_bottom = window_top + window.outerHeight;
 
   if (window_top < window.outerHeight) {
-    var logo_offset = (page_offset * page_offset / 1200) - page_offset;
-    var width_offset = (page_offset * page_offset / 50) - page_offset;
-
-    $logo.css( "--offset-top", -logo_offset + "px" );
-
     if (window.outerWidth > 800) {
+      var logo_offset = (page_offset * page_offset / 1200) - page_offset;
+      var width_offset = (page_offset * page_offset / 50) - page_offset;
+
+      $logo.css( "--offset-top", -logo_offset + "px" );
+
       var new_width = window.outerWidth * 0.5;
 
       new_width = new_width > 800 ? 800 : new_width;
