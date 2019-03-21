@@ -6,7 +6,6 @@ var $anims = $('.animated');
 
 $(window).on('scroll resize', function() {
   var page_offset = window.pageYOffset - 100;
-  var logo_width = window.outerWidth / 2.4;
 
   var window_top = window.scrollY;
   var window_bottom = window_top + window.outerHeight;
@@ -18,13 +17,16 @@ $(window).on('scroll resize', function() {
     $logo.css( "--offset-top", -logo_offset + "px" );
 
     if (window.outerWidth > 800) {
-      var new_width = (logo_width - width_offset * 0.06);
+      var new_width = window.outerWidth * 0.5;
+
+      new_width = new_width > 800 ? 800 : new_width;
+      new_width -= width_offset * 0.06;
 
       if (new_width < 50) new_width = 50;
 
       $logo.css( "--width", new_width + "px" );
     } else {
-      $logo.css( "--width", logo_width + "px" );
+      $logo.css( "--width", window.outerWidth * 0.8 + "px" );
     }
   }
 

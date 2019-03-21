@@ -5,6 +5,7 @@
 
 	opacity: var(--opacity);
 	width: var(--width);	
+	-webkit-transform: translate3d(0, var(--offset-top), 0);
 	transform: translate3d(0, var(--offset-top), 0); 
 
 	height: auto;
@@ -15,6 +16,7 @@
 	--offset-top: 0px;
 
 	opacity: var(--opacity);
+	-webkit-transform: translate3d(0, var(--offset-top), 0);
 	transform: translate3d(0, var(--offset-top), 0);
 	color: var(--color-primary);
 	
@@ -101,5 +103,15 @@
 @media screen and (min-width: 800px) {
 	.profile-card {
 		margin: 2% 0;
+	}
+}
+
+#contact-email {
+	font-size: 24px;
+}
+
+@media screen and (min-width: 800px) {
+	#contact-email {
+		font-size: 32px;
 	}
 }
