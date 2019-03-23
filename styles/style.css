@@ -37,6 +37,16 @@ body {
 	background-color: var(--color-primary);
 }
 
+@media screen and (min-width: 800px) {
+	.section-primary {
+		background-image: url(../images/web_home_shape.svg);
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: 75%;
+		background-position: 100% 50%;
+	}
+}
+
 .section-gradient {
 	color: #fff;
   background-image: linear-gradient(to right, #81E1DD , #4AC074);
@@ -44,7 +54,16 @@ body {
 
 .section-light {
 	color: var(--color-dark);
-	background-color: var(--color-light);
+	background-color: var(#FFF);
+}
+
+@media screen and (min-width: 800px) {
+	.section-light {
+		background-image: url(../images/web_home_curve.svg);
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
 }
 
 .section-dark {
